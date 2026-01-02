@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Releituras Gastronômicas: Lucre com Saúde - Aron Girardelli</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1F4E3D;
+            /* Dark Green */
+            --secondary-color: #D9832E;
+            /* Burnt Orange */
+            --tertiary-color: #C87932;
+            /* Terracotta */
+            --bg-color: #F9F7F2;
+            /* Off-white/Beige */
+            --text-color: #333333;
+            /* Dark Grey */
+            --white: #FFFFFF;
+            --light-grey: #EEEEEE;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Alexandria', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        ul,
+        ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            /* Enhanced shadow */
+            border-radius: 12px;
+            /* Smooth corners */
+        }
+
+        /* Cover Page */
+        header.cover {
+            text-align: center;
+            padding: 0 0 4rem 0;
+            /* Remove top padding for image */
+            border-bottom: 8px solid var(--secondary-color);
+            margin-bottom: 4rem;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        header.cover h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            padding: 0 2rem;
+        }
+
+        header.cover h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--tertiary-color);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0 2rem;
+        }
+
+        .author-box {
+            margin: 3rem 2rem 0;
+            padding: 2.5rem;
+            background-color: #F4F8F6;
+            /* Softer green tint */
+            border-radius: 12px;
+            text-align: center;
+            /* Center alignment for bio */
+            border: 1px solid #e0e0e0;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .author-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .author-box h3 {
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Modules General */
+        section.module {
+            margin-bottom: 4rem;
+            page-break-inside: avoid;
+        }
+
+        .module-title {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 2rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .module-title h2 {
+            color: white;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Module 1: Foundation */
+        .card {
+            background: #fff;
+            border: 1px solid var(--light-grey);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            /* For rounded corners on table */
+        }
+
+        table th,
+        table td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        table th {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            font-family: 'Alexandria', sans-serif;
+            font-weight: 600;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .dietary-codes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .code-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-tag.sg {
+            background-color: #D9832E;
+        }
+
+        .code-tag.sl {
+            background-color: #C87932;
+        }
+
+        .code-tag.lc {
+            background-color: #1F4E3D;
+        }
+
+        .code-tag.vg {
+            background-color: #6B8E23;
+        }
+
+        /* Module 2: Recipes */
+        .category-header-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            filter: brightness(0.9);
+            /* Slight dim for text readability if over it, but here it's separate */
+        }
+
+        .recipe-category {
+            font-size: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            border-left: none;
+            text-align: center;
+            color: var(--primary-color);
+            font-weight: 700;
+            background: #F4F8F6;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .recipe-card {
+            border: none;
+            border-radius: 16px;
+            padding: 0;
+            /* Reset padding for full width image */
+            margin-bottom: 4rem;
+            background-color: #fff;
+            page-break-inside: avoid;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            /* Good shadow */
+            overflow: hidden;
+            /* For image radius */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .recipe-card:hover .recipe-image {
+            transform: scale(1.05);
+        }
+
+        .recipe-content {
+            padding: 2.5rem;
+        }
+
+        .recipe-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px dashed #D9832E;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .recipe-header h4 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .recipe-tags {
+            font-size: 0.9rem;
+            color: var(--white);
+            font-weight: bold;
+            background: var(--tertiary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            /* Space on mobile */
+        }
+
+        .ingredients-list,
+        .prep-steps {
+            margin-bottom: 2rem;
+        }
+
+        .ingredients-list h5,
+        .prep-steps h5 {
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .ingredients-list ul li {
+            margin-bottom: 0.4rem;
+        }
+
+        .prep-steps ol li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+
+        .nutri-tip {
+            background-color: #FDF6EC;
+            /* Light orange/cream */
+            border-left: 6px solid var(--secondary-color);
+            padding: 1.5rem;
+            font-style: italic;
+            font-size: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .nutri-tip strong {
+            color: var(--tertiary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-style: normal;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            margin-top: 6rem;
+            border-radius: 12px 12px 0 0;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header.cover h1 {
+                font-size: 2.2rem;
+            }
+
+            .recipe-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+
+            .container {
+                padding: 1rem;
+                margin: 0;
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .hero-image {
+                height: 250px;
+            }
+
+            .category-header-image {
+                height: 180px;
+            }
+
+            .recipe-image {
+                height: 200px;
+            }
+
+            .recipe-content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Print */
+        @media print {
+            @page {
+                size: A4;
+                margin: 15mm;
+            }
+
+            body {
+                background-color: white;
+                font-size: 11pt;
+                /* Slightly smaller for better fit */
+                color: #000;
+                line-height: 1.4;
+            }
+
+            .container {
+                box-shadow: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                margin: 0;
+                border: none;
+            }
+
+            /* Content Breaking Rules */
+            header.cover {
+                page-break-after: always;
+                min-height: 90vh;
+                /* Ensure cover takes full page */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-bottom: none;
+            }
+
+            section.module {
+                page-break-inside: auto;
+                /* Allow breaking inside modules */
+                margin-bottom: 0;
+            }
+
+            .module-title {
+                page-break-before: always;
+                page-break-after: avoid;
+                margin-top: 0;
+                background-color: var(--primary-color) !important;
+                color: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 1rem;
+            }
+
+            /* Avoid break before first module if desired, but keeping it clean is usually better. 
+               Let's keep the always break for organization. */
+
+            .card,
+            .recipe-card,
+            .author-box,
+            table {
+                page-break-inside: avoid;
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin-bottom: 1.5rem;
+            }
+
+            /* Headers should stick to content */
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                page-break-after: avoid;
+                break-after: avoid;
+                color: #000 !important;
+            }
+
+            /* Recipe specific */
+            .recipe-image {
+                max-height: 250px;
+                /* Constrain height to save space */
+                object-fit: cover;
+                border-bottom: 1px solid #eee;
+            }
+
+            .category-header-image {
+                page-break-before: always;
+                page-break-after: avoid;
+                max-height: 180px;
+                margin-bottom: 1rem;
+            }
+
+            /* Ensure category title sticks to image/first recipe */
+            .recipe-category {
+                page-break-after: avoid;
+                break-after: avoid;
+                margin-top: 0;
+            }
+
+            .nutri-tip {
+                background-color: #f9f9f9 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                border-left: 4px solid #000 !important;
+                page-break-inside: avoid;
+            }
+
+            /* Hidden elements */
+            footer,
+            .no-print {
+                display: none !important;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            p {
+                margin-bottom: 0.8rem;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Cover Page -->
+        <header class="cover">
+            <img src="cover_hero.png" alt="Mesa com pratos gastronômicos saudáveis" class="hero-image">
+            <h1>Curso de Releituras Gastronômicas: Lucre com Saúde</h1>
+            <h2>Transforme clássicos em opções saudáveis, inclusivas e deliciosas</h2>
+
+            <div class="author-box">
+                <img src="autor.png" alt="Aron Girardelli" class="author-image">
+                <h3>Sobre o Autor: Aron Girardelli</h3>
+                <p><strong>Estudante de Nutrição & Atleta de Fisiculturismo</strong></p>
+                <p>Apaixonado pela ciência da nutrição e pela arte da gastronomia, Aron Girardelli dedica sua carreira a
+                    desmistificar a alimentação saudável. Com uma abordagem que une o rigor técnico da nutrição
+                    esportiva ao prazer de comer bem, sua missão é provar que saúde e sabor caminham juntos. Este curso
+                    é o resultado de anos de prática, adaptando receitas clássicas para versões que nutrem o corpo e
+                    encantam o paladar.</p>
+            </div>
+        </header>
+
+        <!-- Module 1 -->
+        <section class="module" id="module-1">
+            <div class="module-title">
+                <h2>Módulo 1: A Base dos Sabores Saudáveis</h2>
+            </div>
+
+            <div class="card">
+                <h3>Por Que os Macronutrientes Importam?</h3>
+                <p>Entender os macronutrientes é o primeiro passo para criar releituras que funcionam. Não se trata
+                    apenas de calorias, mas de como cada ingrediente afeta a textura, o sabor e a saciedade.</p>
+                <ul>
+                    <li><strong>Proteínas:</strong> Estrutura e saciedade. Em massas, ajudam a dar "liga" quando usamos
+                        farinhas sem glúten.</li>
+                    <li><strong>Carboidratos:</strong> Energia e conforto. Preferimos os complexos (integrais, raízes)
+                        que liberam energia gradualmente.</li>
+                    <li><strong>Gorduras:</strong> Sabor e textura. Usamos fontes boas (azeite, abacate, oleaginosas)
+                        para untuosidade sem inflamação.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Trocas Inteligentes (Smart Swaps)</h3>
+                <p>A mágica acontece aqui. Substituições que mantém a essência do prato, mas melhoram o perfil
+                    nutricional.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ingrediente Tradicional</th>
+                            <th>Troca Saudável</th>
+                            <th>Benefício</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Creme de Leite</td>
+                            <td>Iogurte Natural / Creme de Ricota / Creme de Inhame</td>
+                            <td>Menos gordura saturada, mais proteína e probióticos.</td>
+                        </tr>
+                        <tr>
+                            <td>Açúcar Refinado</td>
+                            <td>Purê de Maçã / Mel / Adoçantes Naturais (Xilitol)</td>
+                            <td>Menor índice glicêmico, sabor mais complexo.</td>
+                        </tr>
+                        <tr>
+                            <td>Farinha de Trigo</td>
+                            <td>Farinha de Aveia / Farinha de Arroz / Amêndoas</td>
+                            <td>Mais fibras, opções sem glúten, maior saciedade.</td>
+                        </tr>
+                        <tr>
+                            <td>Óleo de Soja</td>
+                            <td>Azeite de Oliva / Óleo de Coco</td>
+                            <td>Gorduras anti-inflamatórias e mais estáveis.</td>
+                        </tr>
+                        <tr>
+                            <td>Massas Brancas</td>
+                            <td>Abobrinha laminada / Pupunha / Integral</td>
+                            <td>Redução de carboidratos simples, aumento de micronutrientes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>Códigos Dietéticos</h3>
+                <p>Identifique rapidamente o perfl de cada receita:</p>
+                <div class="dietary-codes">
+                    <span class="code-tag sg">SG = Sem Glúten</span>
+                    <span class="code-tag sl">SL = Sem Lactose</span>
+                    <span class="code-tag lc">LC = Low Carb</span>
+                    <span class="code-tag vg">VG = Vegano</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2 -->
+        <section class="module" id="module-2">
+            <div class="module-title">
+                <h2>Módulo 2: As 15 Receitas de Ouro</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Aqui você encontrará o passo a passo
+                detalhado para executar pratos incríveis, testados e aprovados.</p>
+
+            <!-- Café da Manhã -->
+            <img src="breakfast_header.png" alt="Café da manhã saudável" class="category-header-image">
+            <h3 class="recipe-category">Café da Manhã & Lanches Matinais</h3>
+
+            <!-- Recipe 1 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_1.png" alt="Pão de Queijo Fit" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>1. Pão de Queijo Fit</h4>
+                        <div class="recipe-tags">SG | Proteico</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>1 xícara de creme de ricota ou cottage</li>
+                            <li>1 xícara de polvilho azedo</li>
+                            <li>2 colheres de sopa de queijo parmesão ralado (opcional)</li>
+                            <li>1 colher de sopa de chia ou linhaça (opcional)</li>
+                            <li>Sal a gosto</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Em uma tigela, misture o creme de ricota com o polvilho azedo até formar uma massa
+                                homogênea que solte das mãos.</li>
+                            <li>Adicione o queijo parmesão, as sementes e o sal. Misture bem.</li>
+                            <li>Faça pequenas bolinhas com as mãos.</li>
+                            <li>Leve ao forno pré-aquecido a 180°C ou na Airfryer por cerca de 15 a 20 minutos, até
+                                dourarem.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Essa versão tem muito mais proteína que o pão de queijo tradicional por causa da ricota,
+                        garantindo saciedade por mais tempo. Ótimo para congelar cru!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 2 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_2.png" alt="Crepioca Turbinada" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>2. Crepioca Turbinada</h4>
+                        <div class="recipe-tags">SG | SL (opcional)</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>1 ovo inteiro</li>
+                            <li>2 colheres de sopa de goma de tapioca hidratada</li>
+                            <li>1 colher de sopa de farinha de aveia (para mais fibras)</li>
+                            <li>1 colher de chá de cúrcuma (açafrão)</li>
+                            <li>Recheio: Frango desfiado ou Tofu mexido</li>
+                            <li>Sal e orégano a gosto</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Bata o ovo, a tapioca, a farinha de aveia e os temperos com um garfo até ficar bem
+                                misturado.</li>
+                            <li>Aqueça uma frigideira antiaderente (unte levemente se necessário).</li>
+                            <li>Despeje a mistura e deixe firmar. Vire para dourar o outro lado.</li>
+                            <li>Adicione o recheio de sua preferência e dobre ao meio.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        A adição da aveia reduz o índice glicêmico da tapioca pura, evitando picos de insulina logo pela
+                        manhã. A cúrcuma é um potente anti-inflamatório.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 3 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_3.png" alt="Bolo de Fubá com Iogurte" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>3. Bolo de Fubá com Iogurte</h4>
+                        <div class="recipe-tags">SG | Fibras</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 ovos</li>
+                            <li>1 pote de iogurte natural desnatado (170g)</li>
+                            <li>1/2 xícara de óleo de coco ou azeite suave</li>
+                            <li>1 xícara de fubá mimoso</li>
+                            <li>1/2 xícara de farinha de aveia</li>
+                            <li>1/2 xícara de adoçante culinário ou açúcar demerara</li>
+                            <li>1 colher de sopa de sementes de erva-doce</li>
+                            <li>1 colher de sopa de fermento em pó</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>No liquidificador, bata os ovos, o iogurte, o óleo e o adoçante/açúcar.</li>
+                            <li>Em uma tigela, misture o fubá, a aveia e a erva-doce.</li>
+                            <li>Incorpore o líquido aos secos delicadamente.</li>
+                            <li>Adicione o fermento por último.</li>
+                            <li>Asse em forma untada (com furo no meio) a 180°C por cerca de 30-35 minutos.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        O iogurte traz umidade sem precisar de excesso de óleo, e a combinação de fubá e aveia oferece
+                        carboidratos de boa qualidade e fibras.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Almoço -->
+            <img src="lunch_header.png" alt="Almoço gourmet saudável" class="category-header-image">
+            <h3 class="recipe-category">Almoço: Clássicos Reinventados</h3>
+
+            <!-- Recipe 4 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_4.png" alt="Strogonoff Saudável" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>4. Strogonoff Saudável</h4>
+                        <div class="recipe-tags">SG | SL | Proteico</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>500g de peito de frango em cubos (ou cogumelos para versão VG)</li>
+                            <li>1 cebola picada e 2 dentes de alho</li>
+                            <li>1 xícara de molho de tomate caseiro</li>
+                            <li>1 copo de iogurte natural OU creme de inhame (cozinhe e bata o inhame com um pouco de
+                                água)</li>
+                            <li>1 colher de sopa de mostarda dijon ou amarela</li>
+                            <li>Salsinha e cebolinha a gosto</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Refogue a cebola e o alho com um fio de azeite. Sele o frango até dourar.</li>
+                            <li>Adicione o molho de tomate e deixe cozinhar bem o frango.</li>
+                            <li>Desligue o fogo (importante para não talhar o iogurte).</li>
+                            <li>Adicione o iogurte ou creme de inhame e a mostarda. Misture bem até ficar cremoso.</li>
+                            <li>Finalize com cheiro verde.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        O creme de leite tradicional é rico em gorduras saturadas. O iogurte ou inhame trazem a
+                        cremosidade perfeita com muito mais nutrientes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 5 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_5.png" alt="Parmegiana de Forno" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>5. Parmegiana de Forno</h4>
+                        <div class="recipe-tags">Assado | Integral</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>Filés de frango ou bife magro (patinho)</li>
+                            <li>Farinha de aveia ou farinha de rosca integral para empanar</li>
+                            <li>1 ovo batido para empanar</li>
+                            <li>Molho de tomate caseiro</li>
+                            <li>Queijo mussarela light ou minas padrão ralado</li>
+                            <li>Temperos: sal, pimenta, orégano</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Tempere os filés. Passe no ovo batido e depois na farinha de aveia pressionando bem.
+                            </li>
+                            <li>Disponha em uma assadeira antiaderente (não precisa fritar em imersão!).</li>
+                            <li>Leve ao forno alto por 15-20 minutos, virando na metade do tempo, até dourar e cozinhar.
+                            </li>
+                            <li>Retire, cubra com molho de tomate e o queijo.</li>
+                            <li>Volte ao forno apenas para gratinar o queijo.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Eliminamos a fritura por imersão, reduzindo drasticamente as calorias. A farinha de aveia cria
+                        uma crosta crocante e rica em fibras.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 6 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_6.png" alt="Feijoada Light" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>6. Feijoada Light</h4>
+                        <div class="recipe-tags">Leve | Proteica</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>500g de feijão preto deixado de molho por 12h</li>
+                            <li>300g de carne seca magra (dessalgada e sem gordura aparente)</li>
+                            <li>300g de lombo suíno em cubos (magro)</li>
+                            <li>200g de tofu defumado em cubos (dá o gosto de defumado sem a gordura do bacon/paio)</li>
+                            <li>Louro, alho, cebola e cominho</li>
+                            <li>Laranja (para cozinhar junto e absorver gordura, depois descarta)</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Em uma panela de pressão, refogue alho e cebola. Sele o lombo e a carne seca.</li>
+                            <li>Adicione o feijão, o louro, a laranja inteira (lavada) e cubra com água.</li>
+                            <li>Cozinhe na pressão por 30-40 minutos.</li>
+                            <li>Retire a laranja. Adicione o tofu defumado e deixe o caldo engrossar em fogo baixo.</li>
+                            <li>Acerte o sal e sirva com couve refogada e farofa de aveia.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        O segredo do sabor aqui é o tofu defumado e temperos naturais, substituindo os embutidos
+                        gordurosos e cheios de sódio.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 7 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_7.png" alt="Galinhada Integral" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>7. Galinhada Integral</h4>
+                        <div class="recipe-tags">Integral | Anti-inflamatória</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>1 xícara de arroz integral (ou cateto)</li>
+                            <li>500g de frango em pedaços (sobrecoxa desossada sem pele ou peito)</li>
+                            <li>1 colher de sopa de cúrcuma (açafrão)</li>
+                            <li>1 cenoura em cubos, 1 pimentão vermelho picado, ervilhas frescas</li>
+                            <li>Caldo de legumes caseiro ou água</li>
+                            <li>Salsinha e cebolinha</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Marine o frango com limão, alho e sal. Sele na panela com um fio de azeite e reserve.
+                            </li>
+                            <li>Na mesma panela, refogue a cebola, alho e a cúrcuma.</li>
+                            <li>Adicione o arroz integral e os vegetais (cenoura, pimentão). Refogue.</li>
+                            <li>Volte o frango para a panela. Cubra com o caldo ou água fervente (proporção 3:1 para
+                                integral).</li>
+                            <li>Cozinhe em fogo baixo até o arroz ficar macio. Finalize com as ervilhas e cheiro verde.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Prato único e completo. A cúrcuma potencializa a imunidade e o arroz integral garante energia
+                        sustentada para a tarde.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lanches -->
+            <img src="snack_header.png" alt="Lanches saudáveis" class="category-header-image">
+            <h3 class="recipe-category">Lanches e Petiscos</h3>
+
+            <!-- Recipe 8 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_8.png" alt="Coxinha de Batata Doce" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>8. Coxinha de Batata Doce</h4>
+                        <div class="recipe-tags">SG | SL | Assada</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 xícaras de batata doce cozida e amassada</li>
+                            <li>1/2 xícara de farinha de aveia ou farinha de arroz</li>
+                            <li>1 colher de sopa de azeite</li>
+                            <li>Recheio: Frango desfiado bem temperado</li>
+                            <li>Farinha de linhaça dourada para empanar</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Misture a batata doce amassada (fria), a farinha e o azeite e sal até formar uma massa
+                                modelável (não pegajosa).</li>
+                            <li>Abra um disco de massa na mão, coloque o recheio e feche em formato de gota (coxinha).
+                            </li>
+                            <li>Passe na farinha de linhaça para "empanar".</li>
+                            <li>Asse no forno ou Airfryer a 200°C por 15-20 min até ficar crocante por fora.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        A batata doce tem baixo índice glicêmico comparada à farinha de trigo da coxinha tradicional.
+                        Perfeito para pré-treino!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 9 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_9.png" alt="Kibe de Abóbora e Quinoa" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>9. Kibe de Abóbora e Quinoa</h4>
+                        <div class="recipe-tags">VG | Fibras</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 xícaras de abóbora cabotiá cozida e amassada</li>
+                            <li>1 xícara de quinoa em grãos cozida</li>
+                            <li>Hortelã picada (muita!), cebola picadinha, zatar e cominho</li>
+                            <li>Sal e pimenta síria</li>
+                            <li>Nozes picadas (opcional, para crocância)</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Misture todos os ingredientes em uma tigela. A massa deve ficar firme. Se precisar,
+                                adicione um pouco de farinha de aveia.</li>
+                            <li>Unte uma assadeira com azeite.</li>
+                            <li>Espalhe a massa na assadeira (como kibe de bandeja) ou modele kibes individuais.</li>
+                            <li>Faça cortes diagonais na superfície e regue com azeite.</li>
+                            <li>Asse a 200°C por cerca de 30 minutos até dourar.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        A quinoa é uma proteína vegetal completa. Essa versão é super leve, digesta e cheia de
+                        micronutrientes da abóbora.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jantar -->
+            <img src="lunch_header.png" alt="Jantar leve" class="category-header-image"
+                style="object-position: bottom;">
+            <h3 class="recipe-category">Jantar: Leveza e Sabor</h3>
+
+            <!-- Recipe 10 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_10.png" alt="Escondidinho de Mandioca Fit" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>10. Escondidinho de Mandioca Fit</h4>
+                        <div class="recipe-tags">SG | SL</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>500g de mandioca ou aipim cozido muito bem</li>
+                            <li>1/2 xícara de leite de coco light ou água do cozimento (para o purê)</li>
+                            <li>400g de patinho moído refogado com vegetais (cenoura ralada, vagem picadinha)</li>
+                            <li>Curry ou açafrão para o purê (opcional)</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Amasse a mandioca ou processe até virar um purê liso. Use um pouco da água do cozimento
+                                ou leite de coco para dar ponto. Tempere com sal.</li>
+                            <li>Prepare a carne moída, deixando-a bem sequinha mas suculenta. Misture vegetais para
+                                render e nutrir.</li>
+                            <li>Em um refratário, faça uma camada de carne e cubra com o purê.</li>
+                            <li>Leve ao forno para aquecer. Opcional: gratinar com queijo coalho por cima.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        A mandioca é uma excelente fonte de energia, mas moderação é chave no jantar. O segredo é
+                        aumentar o volume do recheio com vegetais.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 11 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_11.png" alt="Moqueca Vegana" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>11. Moqueca Vegana</h4>
+                        <div class="recipe-tags">VG | SG | Tropical</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 bananas da terra maduras (ou palmito pupunha em rodelas)</li>
+                            <li>1 pimentão amarelo e 1 vermelho em rodelas</li>
+                            <li>2 tomates maduros em rodelas e 1 cebola em rodelas</li>
+                            <li>200ml de leite de coco</li>
+                            <li>1 colher de sopa de azeite de dendê (opcional, para sabor original)</li>
+                            <li>Coentro, pimenta dedo-de-moça e limão</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Em uma panela de barro ou fundo grosso, faça camadas: cebola, pimentões, tomates e a
+                                banana da terra (ou palmito).</li>
+                            <li>Regue com o leite de coco, o dendê e suco de meio limão. Tempere com sal.</li>
+                            <li>Tampe e cozinhe em fogo baixo por cerca de 15-20 minutos, sem mexer muito para não
+                                desmanchar.</li>
+                            <li>Finalize com muito coentro fresco.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Prato rico em potássio e licopeno. Use leite de coco caseiro ou versões com menos gordura para
+                        um jantar mais leve.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 12 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_12.png" alt="Lasanha de Abobrinha" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>12. Lasanha de Abobrinha</h4>
+                        <div class="recipe-tags">LC | SG | Leve</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 abobrinhas italianas grandes fatiadas finamente no sentido do comprimento (lâminas)
+                            </li>
+                            <li>300g de carne moída magra ou frango ao molho sugo</li>
+                            <li>200g de ricota temperada ou queijo cottage</li>
+                            <li>Queijo parmesão para gratinar</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Grelhe as fatias de abobrinha rapidamente na frigideira para retirar o excesso de água
+                                (essencial para não aguar a lasanha).</li>
+                            <li>Em um refratário, monte: camada de molho, abobrinha, creme de ricota, molho,
+                                abobrinha...</li>
+                            <li>Finalize com molho e parmesão.</li>
+                            <li>Forno por 20min a 200°C.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Substituir a massa por abobrinha reduz drasticamente os carboidratos e calorias, tornando a
+                        lasanha uma opção perfeita para jantar low carb.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sobremesas -->
+            <img src="dessert_header.png" alt="Sobremesas refrescantes" class="category-header-image">
+            <h3 class="recipe-category">Sobremesas Refrescantes</h3>
+
+            <!-- Recipe 13 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_13.png" alt="Mousse de Maracujá Proteico" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>13. Mousse de Maracujá Proteico</h4>
+                        <div class="recipe-tags">Proteico | Rápido</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>1 xícara de leite em pó desnatado</li>
+                            <li>1/2 pacote de suco em pó zero açúcar sabor maracujá (ou polpa de 2 maracujás reduzida)
+                            </li>
+                            <li>1/2 xícara de água gelada (vá colocando aos poucos)</li>
+                            <li>Polpa de maracujá fresco para decorar</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>No liquidificador ou mixer, bata a água, o leite em pó e o suco em pó.</li>
+                            <li>Bata por cerca de 3 a 5 minutos. A mistura vai ganhar consistência de mousse aerada
+                                automaticamente.</li>
+                            <li>Leve à geladeira por 1 hora. decore com a polpa fresca.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Uma "bomba" de cálcio e proteínas disfarçada de sobremesa. Mata a vontade de doce sem açúcar
+                        adicionado.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 14 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_14.png" alt="Sorbet de Manga com Gengibre" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>14. Sorbet de Manga com Gengibre</h4>
+                        <div class="recipe-tags">VG | SG | SL</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>2 mangas maduras (Palmer ou Tommy) picadas e congeladas (mínimo 4h)</li>
+                            <li>1 pedacinho de gengibre fresco (a gosto)</li>
+                            <li>Hortelã para decorar</li>
+                            <li>1 colher de sopa de mel ou agave (opcional, se a manga estiver doce não precisa)</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Retire a manga do freezer 5 minutos antes de bater.</li>
+                            <li>Processe a manga congelada com o gengibre e o mel no processador ou liquidificador
+                                potente.</li>
+                            <li>Pare e mexa se necessário, até virar um creme gelado homogêneo.</li>
+                            <li>Sirva imediatamente como sorvete.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        100% fruta, zero gordura. O gengibre acelera o metabolismo e ajuda na digestão. Perfeito para o
+                        verão.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 15 -->
+            <div class="recipe-card">
+                <img src="imagens_receitas/Image_15.png" alt="Beijinho de Ricota e Coco" class="recipe-image">
+                <div class="recipe-content">
+                    <div class="recipe-header">
+                        <h4>15. Beijinho de Ricota e Coco</h4>
+                        <div class="recipe-tags">Proteico | Low Sugar</div>
+                    </div>
+                    <div class="ingredients-list">
+                        <h5>Ingredientes:</h5>
+                        <ul>
+                            <li>200g de ricota fresca esfarelada</li>
+                            <li>3 colheres de sopa de leite em pó</li>
+                            <li>2 colheres de sopa de coco ralado sem açúcar (+ para enrolar)</li>
+                            <li>Adoçante xilitol ou eritritol a gosto (ou mel)</li>
+                            <li>Essência de baunilha</li>
+                            <li>Cravos para decorar</li>
+                        </ul>
+                    </div>
+                    <div class="prep-steps">
+                        <h5>Modo de Preparo:</h5>
+                        <ol>
+                            <li>Processe a ricota com o leite em pó, adoçante e baunilha até ficar uma massa lisa.</li>
+                            <li>Misture o coco ralado.</li>
+                            <li>Leve à geladeira por 30min para firmar.</li>
+                            <li>Enrole as bolinhas, passe no coco ralado e espete um cravo.</li>
+                        </ol>
+                    </div>
+                    <div class="nutri-tip">
+                        <strong>💡 Dica do Nutri:</strong>
+                        Uma alternativa ao leite condensado. Rico em proteínas de alto valor biológico e gorduras boas
+                        do coco.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bonus Section -->
+        <section class="module" id="bonus">
+            <div class="module-title" style="background-color: var(--tertiary-color);">
+                <h2>Bônus: Negócios & Armazenamento</h2>
+            </div>
+
+            <div class="card">
+                <h3>Congelamento e Marmitas</h3>
+                <p>Para quem quer vender ou ganhar tempo na semana:</p>
+                <ul>
+                    <li><strong>Branqueamento:</strong> Vegetais crus (brócolis, cenoura) devem ser branqueados (água
+                        fervente por 2min + choque térmico em água gelada) antes de congelar para manter cor e textura.
+                    </li>
+                    <li><strong>Resfrie antes de fechar:</strong> Nunca coloque comida quente direto no freezer ou pote
+                        fechado. Isso gera cristais de gelo que aguam a comida.</li>
+                    <li><strong>Validade:</strong> Maioria das marmitas dura 3 meses no freezer (-18°C).</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Rotulagem para Venda</h3>
+                <p>Segurança e profissionalismo são essenciais:</p>
+                <ul>
+                    <li><strong>Alergênicos:</strong> Sempre destaque em negrito: "CONTÉM GLÚTEN", "CONTÉM LACTOSE",
+                        "ALÉRGICOS: CONTÉM OVO, LEITE, AMÊNDOAS".</li>
+                    <li><strong>Data de Fabricação e Validade:</strong> Obrigatório.</li>
+                    <li><strong>Modo de Aquecimento:</strong> Instrua seu cliente (ex: "Microondas por 5 min com tampa
+                        entreaberta").</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h2>Aron Girardelli Nutrition</h2>
+            <p>Acompanhe mais dicas e receitas exclusivas:</p>
+
+            <div class="social-links"
+                style="display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; align-items: center;">
+                <a href="https://instagram.com/aron_girardelli" target="_blank"
+                    style="display: flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none;">
+                    <!-- Instagram Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--secondary-color);">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span style="color: var(--secondary-color); font-weight: bold;">@aron_girardelli</span>
+                </a>
+
+                <a href="mailto:arongirardelli@gmail.com"
+                    style="display: flex; align-items: center; gap: 0.5rem; color: white; text-decoration: none;">
+                    <!-- Mail Icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--secondary-color);">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span style="color: var(--secondary-color); font-weight: bold;">arongirardelli@gmail.com</span>
+                </a>
+            </div>
+
+            <p style="font-size: 0.9rem; opacity: 0.8;">&copy; 2025 Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
